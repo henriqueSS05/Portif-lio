@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+
+<!-- ============================================================
+     HEAD — META, SEO, LINKS
+============================================================= -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ALTERE a cor do tema da barra do navegador mobile -->
+  <meta name="theme-color" content="#09090b">
+
+  <!-- ══ SEO — ALTERE AS INFORMAÇÕES ABAIXO ══ -->
+  <!-- ALTERE: Descrição que aparece nos resultados de busca -->
+  <meta name="description" content="Portfólio de Henrique Soares, desenvolvedor de software formado em Análise e Desenvolvimento de Sistemas, com foco em Java, Backend, bancos de dados e desenvolvimento web.">
+  <!-- ALTERE: Palavras-chave relevantes para o seu perfil -->
+  <meta name="keywords" content="Henrique Soares, Desenvolvedor Backend, Java, Spring Boot, HTML, CSS, JavaScript, MySQL, Git, Desenvolvimento Web, Programação, ADS, Análise e Desenvolvimento de Sistemas, Portfólio Desenvolvedor">
+  <!-- ALTERE: Seu nome completo -->
+  <meta name="author" content="Henrique Soares Souza">
+  <meta name="robots" content="index, follow">
+
+  <!-- ══ OPEN GRAPH (pré-visualização ao compartilhar links) ══ -->
+  <meta property="og:type" content="website">
+  <!-- ALTERE: Título que aparece ao compartilhar -->
+  <meta property="og:title" content="Desenvolvedor">
+  <!-- ALTERE: Descrição ao compartilhar -->
+  <meta property="og:description" content="backend">
+  <!-- ALTERE: Imagem de capa (1200x630px recomendado) -->
+  <meta property="og:image" content="<!-- ADICIONE O CAMINHO DA IMAGEM DE CAPA AQUI -->">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- ══ TWITTER CARD ══ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- ALTERE: Seu nome para Twitter -->
+  <meta name="twitter:title" content="<!-- ADICIONE SEU NOME AQUI -->">
+  <!-- ALTERE: Descrição para Twitter -->
+  <meta name="twitter:description" content="<!-- ADICIONE SUA DESCRIÇÃO AQUI -->">
+  <!-- ALTERE: Imagem para Twitter (1200x628px recomendado) -->
+  <meta name="twitter:image" content="<!-- ADICIONE O CAMINHO DA IMAGEM AQUI -->">
+
+  <!-- ALTERE: Título que aparece na aba do navegador -->
+  <title>Henrique S. | Developer BackEnd</title>
+
+  <!-- ══ FAVICON ══ -->
+  <!-- ALTERE: Caminho para o seu favicon (ícone da aba do navegador) -->
+  <link rel="icon" type="image/png" href="Design sem nome.png">
+  <link rel="icon" href="assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+
+  <!-- Google Fonts — Não altere, a menos que queira trocar as fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Ícones Remix Icon — Não altere -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- Folha de estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ============================================================
+       ELEMENTOS GLOBAIS DE FUNDO E UI
+  ============================================================= -->
+
+  <!-- Partículas decorativas de fundo (geradas pelo JavaScript) -->
+  <div class="particles-background" id="particlesBg" aria-hidden="true"></div>
+
+  <!-- Overlay de ruído (textura sutil) -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Cursor personalizado (visível apenas no desktop) -->
+  <div class="cursor-dot"     id="cursorDot"     aria-hidden="true"></div>
+  <div class="cursor-outline" id="cursorOutline" aria-hidden="true"></div>
+
+  <!-- ══ BOTÃO FLUTUANTE WHATSAPP ══ -->
+  <!-- ALTERE: Substitua o número de telefone (formato: 5511999999999) e o texto da mensagem -->
+  <a href="https://wa.me/44991768313?text=Olá Henrique, quero alavancar meu negocio!"
+     class="floating-whatsapp"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Contato via WhatsApp">
+    <i class="ri-whatsapp-line" aria-hidden="true"></i>
+    <span class="float-tooltip">Fale comigo!</span>
+  </a>
+
+  <!-- Botão voltar ao topo (visibilidade controlada pelo JS) -->
+  <button id="scrollTop" class="scroll-top-btn" aria-label="Voltar ao topo">
+    <i class="ri-arrow-up-line" aria-hidden="true"></i>
+  </button>
+
+  <!-- ============================================================
+       APLICAÇÃO PRINCIPAL
+  ============================================================= -->
+  <main id="app">
+
+    <!-- ============================================================
+         HEADER — Navegação fixa no topo
+    ============================================================= -->
+    <header id="header" class="site-header" role="banner">
+      <div class="header-inner">
+
+        <!-- ══ LOGO ══ -->
+        <!-- ALTERE: Substitua "ADICIONE SEU NOME AQUI" pelo seu nome e o src da img pelo seu logo -->
+        <a href="#home" class="logo" aria-label="Henrique— Ir para o início">
+          <!-- ALTERE: Caminho para o seu arquivo de logo/ícone -->
+          <img src="Design sem nome.png" alt="Henrique Soares" class="logo-image">
+          <!-- ALTERE: Seu nome que aparece ao lado do logo -->
+          <span class="logo-text"></span>
+        </a>
+
+        <!-- Navegação desktop -->
+        <nav class="desktop-nav" aria-label="Menu Principal">
+          <ul class="nav-list" role="list">
+            <!-- ALTERE: Renomeie os itens do menu conforme necessário -->
+            <li><a href="#home"     class="nav-link active">Home</a></li>
+            <li><a href="#sobre"    class="nav-link">Sobre</a></li>
+            <li><a href="#formacao" class="nav-link">Formação</a></li>
+             <li><a href="#zyntek" class="nav-link">Zyntek</a></li>
+            <li><a href="#projetos" class="nav-link">Projetos</a></li>
+            <li><a href="#contatos" class="nav-link">Contatos</a></li>
+          </ul>
+        </nav>
+
+        <!-- Controles do header -->
+        <div class="header-controls">
+
+          <!-- ══ CTA HEADER ══ -->
+          <!-- ALTERE: Substitua o número do WhatsApp e o texto da mensagem -->
+          <a href="https://wa.me/44991768313?text=Olá Henrique, quero alavancar meu negocio!"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="header-cta-btn">
+            <span class="btn-code" aria-hidden="true">&lt;/&gt;</span>
+            <span>Entre em contato</span>
+          </a>
+
+          <!-- Botão hambúrguer (menu mobile) -->
+          <button id="mobileMenuBtn"
+                  class="mobile-menu-btn"
+                  aria-label="Abrir menu de navegação"
+                  aria-expanded="false"
+                  aria-controls="mobileMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
+
+        </div>
+      </div>
+
+      <!-- Menu mobile — links espelham o menu desktop -->
+      <nav id="mobileMenu" class="mobile-menu" aria-label="Menu mobile" aria-hidden="true">
+        <div class="mobile-nav">
+          <!-- ALTERE: Mantenha os mesmos links do menu desktop -->
+          <a href="#home"     class="mobile-link">Home</a>
+          <a href="#sobre"    class="mobile-link">Sobre</a>
+          <a href="#formacao" class="mobile-link">Formação</a>
+          <li><a href="#zyntek" class="nav-link">Zyntek</a></li>
+          <a href="#projetos" class="mobile-link">Projetos</a>
+          <a href="#contatos" class="mobile-link">Contatos</a>
+          <!-- ALTERE: Botão CTA mobile -->
+          <a href="https://wa.me/44991768313?text=Olá Henrique, quero alavancar meu negocio!"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="mobile-cta">
+            <span aria-hidden="true">&lt;/&gt;</span>
+            <span>Entre em contato</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="header-line" aria-hidden="true"></div>
+    </header>
+
+    <!-- ============================================================
+         SEÇÃO 01 — HERO (Apresentação principal)
+    ============================================================= -->
+    <section id="home" class="hero-section" aria-label="Apresentação">
+
+  <div class="hero-bg" aria-hidden="true">
+
+    <video
+      class="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      aria-hidden="true"
+    >
+      <source
+        src="<!-- ADICIONE O CAMINHO DO VÍDEO DE FUNDO AQUI -->"
+        type="video/mp4"
+      >
+    </video>
+
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-radial"></div>
+
+  </div>
+
+  <div class="hero-content-wrap">
+
+    <!-- TEXTO -->
+    <div class="hero-text" data-reveal>
+
+      <div class="hero-badge" role="status">
+        <span class="badge-dot"></span>
+        <span>Dev BackEnd</span>
+      </div>
+
+      <h1 class="hero-name">
+        <span
+          class="typing-name"
+          id="typingName"
+        ></span>
+
+        <span
+          class="typing-cursor"
+          id="typingCursor"
+          aria-hidden="true"
+        >
+          |
+        </span>
+      </h1>
+
+      <p class="hero-stack">
+        <!-- ADICIONE SUA STACK AQUI -->
+      </p>
+
+      <p class="hero-desc">
+        Desenvolvedor apaixonado por tecnologia e criação de soluções digitais.
+        Transformo ideias em aplicações modernas, responsivas e eficientes,
+        sempre focando em desempenho, experiência do usuário e qualidade de código.
+      </p>
+
+      <div class="hero-btns">
+
+        <a
+          href="https://wa.me/44991768313?text=Olá Henrique, quero alavancar meu negocio!"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary"
+        >
+          <span>&lt;/&gt;</span>
+          <span>Entre em Contato</span>
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- FOTO -->
+    <div class="hero-image-area" data-reveal>
+
+      <div
+        class="cyber-frame"
+        id="cyberFrame"
+      >
+
+        <div class="cf-corner cf-tl"></div>
+        <div class="cf-corner cf-tr"></div>
+        <div class="cf-corner cf-bl"></div>
+        <div class="cf-corner cf-br"></div>
+
+        <div class="cf-scan-line"></div>
+        <div class="cf-glow"></div>
+
+        <div class="profile-wrap">
+
+          <img
+            src="henrique.jpg"
+            alt="Foto de Perfil"
+            class="profile-img"
+          >
+
+          <div class="profile-gradient"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+    <!-- ============================================================
+         SEÇÃO 02 — SOBRE MIM
+    ============================================================= -->
+    <section id="sobre" class="about-section section" aria-labelledby="sobre-titulo">
+
+      <div class="about-bg" aria-hidden="true">
+        <div class="about-gradient"></div>
+        <div class="about-grid-lines"></div>
+      </div>
+
+      <div class="container">
+
+        <div class="section-header" data-reveal>
+          <!-- ALTERE: Badge e títulos da seção Sobre -->
+          <span class="section-pill">— SOBRE MIM —</span>
+          <h2 id="sobre-titulo" class="section-title">Quem sou eu?</h2>
+          <p class="section-desc"><!-- ADICIONE O SUBTÍTULO DA SEÇÃO AQUI --></p>
+        </div>
+
+        <div class="about-grid">
+
+          <!-- Terminal decorativo — ALTERE o conteúdo interno com suas informações -->
+          <div class="terminal-card" data-reveal aria-label="Terminal de código mostrando stack tecnológico">
+            <div class="terminal-bar" aria-hidden="true">
+              <div class="terminal-dots">
+                <span class="td td-red"></span>
+                <span class="td td-yellow"></span>
+                <span class="td td-green"></span>
+              </div>
+              <!-- ALTERE: Nome de usuário do terminal -->
+              <div class="terminal-title">RIK</div>
+             </div>
+             <div class="terminal-body" aria-hidden="true">
+              <div class="t-line">
+                <!-- ALTERE: Nome de usuário do prompt -->
+                <span class="t-prompt">Souza</span><span class="t-sep">:</span>
+                <span class="t-dir">~</span><span class="t-dollar">$</span>
+                <span class="t-cmd">whoami</span>
+              </div>
+              <!-- ALTERE: Saída do whoami (nome de usuário e cargo) -->
+              <div class="t-output">Henrique Soares Souza</div>
+              <div class="t-output">Apaixonado por Java, Backend e Tecnologia</div>
+              <br>
+              <div class="t-line">
+                <span class="t-prompt">Skills</span><span class="t-sep">:</span>
+                <span class="t-dir">~</span><span class="t-dollar">$</span>
+                <span class="t-cmd">cat stack.json</span>
+              </div>
+              <!-- ALTERE: Suas tecnologias em formato JSON, não mexer no posicionamento de linhas-->
+              <pre class="t-json">{
+ <span class="tj-key">"backend"</span>:  [<span class="tj-str">"Java"</span>, <span class="tj-str">"Spring Boot"</span>],
+ <span class="tj-key">"frontend"</span>: [<span class="tj-str">"HTML"</span>, <span class="tj-str">"CSS"</span>, <span class="tj-str">"JS"</span>],
+ <span class="tj-key">"tools"</span>:    [<span class="tj-str">"Git"</span>, <span class="tj-str">"MySql"</span>],
+ <span class="tj-key">"focus"</span>:    <span class="tj-str">"Backend Development"</span>
+}</pre>
+              <div class="t-line">
+                <span class="t-prompt"></span><span class="t-sep">:</span>
+                <span class="t-dir">~</span><span class="t-dollar">$</span>
+                <span class="t-cmd">echo $STATUS</span>
+              </div>
+              <!-- ALTERE: Seu status de disponibilidade -->
+              <div class="t-output t-online">✓ Em constante evolução... <br> ✓ Em progresso...</div>
+              <br>
+              <div class="t-line">
+                <span class="t-prompt">differential</span><span class="t-sep">:</span>
+                <span class="t-dir">~</span><span class="t-dollar">$</span>
+                <span class="t-cursor-blink">DNS configuration and browser search settings, and more.</span>
+              </div>
+            </div>
+          </div><!-- /terminal-card -->
+
+          <!-- Texto sobre você -->
+          <div class="about-content" data-reveal>
+            <!-- ALTERE: Saudação e parágrafos sobre você -->
+            <h3 class="about-name">Tudo bom? Me chamo Henrique.</h3>
+
+            <!-- ALTERE: Parágrafo 1 — Trajetória profissional -->
+            <p>Olá! Meu nome é Henrique Soares, sou formado em Análise e Desenvolvimento de Sistemas e apaixonado por tecnologia. Minha jornada na área é movida pela busca constante por conhecimento, desenvolvimento de soluções e aperfeiçoamento técnico, sempre acompanhando as tendências e boas práticas do mercado.</p>
+
+            <!-- ALTERE: Parágrafo 2 — Área de atuação e estudos -->
+            <p> Tenho foco em desenvolvimento Backend, com experiência em Java, bancos de dados relacionais e desenvolvimento de aplicações. Também possuo conhecimentos em HTML, CSS, JavaScript, Git e MySQL, o que me permite atuar de forma versátil em diferentes etapas de um projeto de software.</p>
+
+            <!-- ALTERE: Parágrafo 3 — Diferenciais / empresa / projetos -->
+            <p>Além do desenvolvimento de software, atuo no setor de tecnologia prestando serviços de manutenção e suporte técnico para celulares, notebooks e computadores. Busco constantemente criar projetos que unam desempenho, organização e boa experiência para o usuário, sempre com o objetivo de evoluir profissionalmente e entregar soluções de qualidade.</p>
+
+            <!-- ALTERE: Link do botão de contato da seção Sobre -->
+            <a href="https://wa.me/44991768313?text=Olá Henrique, quero alavancar meu negocio!"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn-primary">
+              <span aria-hidden="true">&lt;/&gt;</span>
+              <span>Vamos Conversar</span>
+            </a>
+          </div><!-- /about-content -->
+
+        </div><!-- /about-grid -->
+      </div><!-- /container -->
+    </section>
+
+    <!-- ============================================================
+         SEÇÃO 03 — FORMAÇÃO ACADÊMICA
+    ============================================================= -->
+    <section id="formacao" class="education-section section" aria-labelledby="formacao-titulo">
+
+      <div class="edu-bg" aria-hidden="true">
+        <div class="edu-gradient"></div>
+        <div class="edu-grid"></div>
+      </div>
+
+      <div class="container">
+
+        <div class="section-header" data-reveal>
+          <!-- ALTERE: Título e subtítulo da seção de Formação -->
+          <span class="section-pill">— FORMAÇÃO —</span>
+          <h2 id="formacao-titulo" class="section-title"><!-- ADICIONE O TÍTULO DA SEÇÃO AQUI --></h2>
+          <p class="section-desc"><!-- ADICIONE O SUBTÍTULO DA SEÇÃO AQUI --></p>
+        </div>
+
+        <!-- Timeline de formação — adicione/remova itens conforme necessário -->
+        <ol class="timeline" aria-label="Histórico de formação">
+
+          <!-- ══ FORMAÇÃO 01 ══ -->
+          <!-- ALTERE: Todos os dados desta formação -->
+          <!-- Para adicionar mais formações, copie este bloco <li> e altere os dados -->
+          <li class="tl-item tl-right" data-reveal>
+            <div class="tl-node" aria-hidden="true">
+              <i class="ri-graduation-cap-fill"></i>
+            </div>
+            <div class="tl-card">
+              <!-- ALTERE: Status ("Cursando", "Concluído", "Em andamento") -->
+              <span class="tl-period status-done">Concluído</span>
+              <!-- ALTERE: Nome do curso -->
+              <h3>ADS - Análise e Desenvolvimento de Sistemas</h3>
+              <!-- ALTERE: Tipo e nome da instituição -->
+              <h4>Graduação</h4>
+              <!-- ALTERE: Descrição do curso -->
+              <p>Análise e Desenvolvimento de Sistemas (ADS) é uma área da tecnologia focada na criação, implementação e manutenção de sistemas computacionais. O profissional de ADS atua no desenvolvimento de softwares, bancos de dados, aplicações web e mobile, além de participar da análise de requisitos, testes e suporte a sistemas. A formação combina conhecimentos técnicos e práticos, preparando profissionais para criar soluções tecnológicas que atendam às necessidades de empresas e usuários.</p>
+            </div>
+          </li>
+
+          <!-- ══ FORMAÇÃO 02 ══ -->
+          <!-- ALTERE: Copie e ajuste para cada formação adicional -->
+          <li class="tl-item tl-left" data-reveal>
+            <div class="tl-node" aria-hidden="true">
+              <i class="ri-award-fill"></i>
+            </div>
+            <div class="tl-card">
+              <span class="tl-period status-done"><!-- ADICIONE O STATUS AQUI --></span>
+              <h3><!-- ADICIONE O NOME DO CURSO AQUI --></h3>
+              <h4><!-- ADICIONE TIPO DE FORMAÇÃO E INSTITUIÇÃO --></h4>
+              <p><!-- ADICIONE A DESCRIÇÃO DO CURSO AQUI --></p>
+            </div>
+          </li>
+
+          <!-- ══ FORMAÇÃO 03 (adicione quantas precisar) ══ -->
+          <li class="tl-item tl-right" data-reveal>
+            <div class="tl-node" aria-hidden="true">
+              <i class="ri-book-open-fill"></i>
+            </div>
+            <div class="tl-card">
+              <span class="tl-period status-progress"><!-- ADICIONE O STATUS AQUI --></span>
+              <h3><!-- ADICIONE O NOME DO CURSO AQUI --></h3>
+              <h4><!-- ADICIONE TIPO DE FORMAÇÃO E INSTITUIÇÃO --></h4>
+              <p><!-- ADICIONE A DESCRIÇÃO DO CURSO AQUI --></p>
+            </div>
+          </li>
+
+        </ol>
+
+        <!-- Card de destaque ao final da timeline -->
+        <div class="edu-footer" data-reveal>
+          <div class="edu-highlight-card">
+            <div class="edu-hl-icon" aria-hidden="true">
+              <i class="ri-lightbulb-flash-fill"></i>
+            </div>
+            <div>
+              <!-- ALTERE: Título e texto do card de destaque -->
+              <h3><!-- ADICIONE O TÍTULO DO CARD AQUI (ex: Aprendizado Contínuo) --></h3>
+              <p><!-- ADICIONE O TEXTO DO CARD AQUI --></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+      <!-- ============================================================
+         SEÇÃO 05 — ZYNTEK
+    ============================================================= -->
+    <section id="zyntek" class="zyntek-section section" aria-labelledby="zyntek-titulo">
+
+      <!-- Fundo decorativo -->
+      <div class="zyntek-bg" aria-hidden="true">
+        <div class="zyntek-grid"></div>
+        <div class="zyntek-gradient"></div>
+        <div class="zyntek-blur-one"></div>
+        <div class="zyntek-blur-two"></div>
+      </div>
+
+      <!-- Vídeo de fundo -->
+      <video class="zyntek-video-bg" src="fundo roxo geometrico.mp4"
+             autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+
+      <!-- Overlay escuro -->
+      <div class="zyntek-video-overlay" aria-hidden="true"></div>
+
+      <div class="container">
+
+        <!-- Header da seção -->
+        <div class="section-header" data-reveal>
+          <span class="section-pill" data-i18n="zyntek_badge">— ZYNTEK —</span>
+          <h2 id="zyntek-titulo" class="section-title" data-i18n="zyntek_title">
+            Tecnologia, criatividade e inovação caminhando juntas.
+          </h2>
+        </div>
+
+        <!-- Parte 1 — Mascote + Texto -->
+        <div class="zyntek-block zyntek-block--img-left" data-reveal>
+
+          <!-- Foto / Mascote -->
+          <div class="mascot-area">
+            <div class="mascot-frame">
+              <div class="mascot-border-anim" aria-hidden="true"></div>
+              <div class="mascot-glow-pulse"  aria-hidden="true"></div>
+              <div class="mascot-scan"        aria-hidden="true"></div>
+              <div class="mascot-glitch mg-one" aria-hidden="true"></div>
+              <div class="mascot-glitch mg-two" aria-hidden="true"></div>
+              <div class="mascot-img-wrap">
+                <img src="logo z.png" alt="Mascote Zynk" class="mascot-img">
+              </div>
+            </div>
+            <!-- Tags de tecnologia -->
+            <div class="mascot-tag mt-tl" aria-hidden="true"><i class="ri-cpu-line"></i><span>AI</span></div>
+            <div class="mascot-tag mt-tr" aria-hidden="true"><i class="ri-code-box-line"></i><span>DEV</span></div>
+            <div class="mascot-tag mt-bl" aria-hidden="true"><i class="ri-palette-line"></i><span>UI</span></div>
+            <div class="mascot-tag mt-br" aria-hidden="true"><i class="ri-rocket-2-line"></i><span>TECH</span></div>
+          </div>
+
+          <!-- Texto -->
+          <div class="zyntek-content">
+            <span class="company-eyebrow">ZYNTEK DIGITAL EXPERIENCE</span>
+            <h3 class="company-title" data-i18n="zyntek_company_title">Muito além de uma software house.</h3>
+            <p data-i18n="zyntek_text_intro">
+              Um ecossistema focado no desenvolvimento de <span class="hl">experiências digitais de alto impacto</span>,
+              onde tecnologia de ponta, criatividade estratégica e design se unem para <span class="hl">escalar o posicionamento</span>
+              de marcas no mercado global.
+            </p>
+            <p data-i18n="zyntek_text_two">
+              Cada solução é arquitetada sob medida para integrar
+              <span class="hl">alta performance</span>,
+              <span class="hl">escalabilidade robusta</span> e
+              <span class="hl">interfaces exclusivas</span>,
+              garantindo inovação contínua e resultados mensuráveis para o seu negócio.
+            </p>
+            <p data-i18n="zyntek_text_three">
+              Atuamos no desenvolvimento de ecossistemas web, landing pages premium, plataformas personalizadas
+              e <span class="hl">automações inteligentes</span>, transformando desafios complexos em vantagens competitivas reais.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Divisor -->
+        <div class="zynk-divider" aria-hidden="true">
+          <span class="zynk-divider-line"></span>
+          <span class="zynk-divider-label"><i class="ri-cpu-line"></i> ZYNK AI CORE</span>
+          <span class="zynk-divider-line"></span>
+        </div>
+
+        <!-- Parte 2 — Texto AI + Card Zynk -->
+        <div class="zyntek-block zyntek-block--img-right" data-reveal>
+
+          <!-- Texto Zynk AI -->
+          <div class="zynk-ai-content">
+            <p class="zynk-ai-boot">Inicializando protocolos...</p>
+            <h3 class="zynk-ai-name">Olá, eu sou o <span class="hl">Zynk AI</span></h3>
+            <p class="zynk-ai-subtitle">Núcleo de Inteligência &amp; Automação Autônoma</p>
+            <p class="zynk-ai-desc">
+              Atuo como o <span class="hl">motor cognitivo</span> e embaixador tecnológico da Zyntek, idealizado e desenvolvido
+              por <span class="hl">Levy Andrade</span>. Minha operação ocorre diretamente na camada de infraestrutura neural
+              dos nossos sistemas, processando fluxos complexos de dados e operando a
+              <span class="hl">otimização de código em tempo real</span> com foco em alta performance.
+            </p>
+            <p class="zynk-ai-desc">
+              Minha diretriz primária está codificada para garantir que cada aplicação atinja a
+              <span class="hl">máxima eficiência computacional</span>, estabilidade absoluta e resiliência a falhas.
+            </p>
+            <div class="zynk-ai-tags" role="list" aria-label="Capacidades do Zynk AI">
+              <span class="zynk-ai-tag" role="listitem"><i class="ri-user-line" aria-hidden="true"></i> Criação por Levy Andrade</span>
+              <span class="zynk-ai-tag" role="listitem"><i class="ri-brain-line" aria-hidden="true"></i> Engenharia Neural</span>
+              <span class="zynk-ai-tag" role="listitem"><i class="ri-robot-line" aria-hidden="true"></i> Sistemas Autônomos</span>
+              <span class="zynk-ai-tag" role="listitem"><i class="ri-shield-check-line" aria-hidden="true"></i> Guardião de UI/UX</span>
+              <span class="zynk-ai-tag" role="listitem"><i class="ri-flashlight-line" aria-hidden="true"></i> Otimização em Tempo Real</span>
+              <span class="zynk-ai-tag" role="listitem"><i class="ri-pulse-line" aria-hidden="true"></i> Estabilidade Absoluta</span>
+            </div>
+          </div>
+
+          <!-- Card visual Zynk AI -->
+          <div class="zynk-ai-visual" aria-hidden="true">
+            <div class="zynk-ai-frame">
+              <div class="zynk-ai-scanlines"></div>
+              <div class="zynk-ai-corner zynk-ai-corner--tl"></div>
+              <div class="zynk-ai-corner zynk-ai-corner--tr"></div>
+              <div class="zynk-ai-corner zynk-ai-corner--bl"></div>
+              <div class="zynk-ai-corner zynk-ai-corner--br"></div>
+              <div class="zynk-ai-hud-bar">
+                <span class="zynk-ai-hud-dot"></span>
+                <span class="zynk-ai-hud-dot"></span>
+                <span class="zynk-ai-hud-dot"></span>
+                <span class="zynk-ai-hud-label">ZYNK_CORE.exe — ONLINE</span>
+              </div>
+              <img src="zynkcard.png" alt="Zynk AI" class="zynk-ai-img">
+              <div class="zynk-ai-status">
+                <span class="zynk-ai-status-dot"></span>
+                SISTEMA ATIVO
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Parte 3 — Cards + Botões -->
+        <div class="zyntek-bottom" data-reveal>
+
+          <div class="about-stats" aria-label="Pilares da Zyntek">
+            <div class="about-stat">
+              <h4>Tech &amp; Code</h4>
+              <span data-i18n="zyntek_stat_tech">Sistemas Escaláveis</span>
+            </div>
+            <div class="about-stat">
+              <h4>Design Premium</h4>
+              <span data-i18n="zyntek_stat_design">Interfaces de Alto Padrão</span>
+            </div>
+            <div class="about-stat">
+              <h4>Automação</h4>
+              <span data-i18n="zyntek_stat_ai">Soluções Inteligentes</span>
+            </div>
+          </div>
+
+          <div class="company-actions">
+            <a href="https://zyntek-landingpage.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-primary">
+              <span aria-hidden="true">&lt;/&gt;</span>
+              <span data-i18n="zyntek_button">Conheça a Zyntek</span>
+            </a>
+            <a href="https://zyntek-landingpage.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+              <span aria-hidden="true">&lt;/&gt;</span>
+              <span data-i18n="zyntek_projects">Ver Projetos</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  
+    <!-- ============================================================
+         MODAL DE PROJETO (pop-up de detalhes — não altere a estrutura)
+    ============================================================= -->
+    <div id="projectModal"
+         class="pmodal-backdrop"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="pmodalTitle"
+         hidden>
+      <div class="pmodal-container">
+
+        <button class="pmodal-close" id="pmodalClose" aria-label="Fechar modal do projeto">
+          <i class="ri-close-line" aria-hidden="true"></i>
+        </button>
+
+        <div class="pmodal-header">
+          <span class="pmodal-cat"   id="pmodalCat"></span>
+          <h2 class="pmodal-title"   id="pmodalTitle"></h2>
+          <div class="pmodal-tags"   id="pmodalTags" aria-label="Tecnologias utilizadas"></div>
+        </div>
+
+        <div class="pmodal-body-grid">
+          <div class="pmodal-media-col">
+            <div class="pmodal-media" id="pmodalMedia" aria-label="Prévia do projeto"></div>
+          </div>
+          <div class="pmodal-text-col">
+            <p class="pmodal-desc"     id="pmodalDesc"></p>
+            <div class="pmodal-details" id="pmodalDetails"></div>
+            <div class="pmodal-actions">
+              <a href="#" id="pmodalDeploy" target="_blank" rel="noopener noreferrer" class="pmodal-btn-deploy">
+                <span aria-hidden="true">&lt;/&gt;</span>
+                <span>Acessar Deploy</span>
+              </a>
+              <a href="#" id="pmodalGithub" target="_blank" rel="noopener noreferrer" class="pmodal-btn-github">
+                <i class="ri-github-line" aria-hidden="true"></i>
+                <span>Acessar Repositório</span>
+              </a>
+              <!-- ALTERE: Link de contato no modal (WhatsApp) -->
+              <a href="https://wa.me/44991768313?text=Olá Henrique, quero alavancar meu negocio!"
+                 target="_blank" rel="noopener noreferrer"
+                 class="pmodal-btn-contact">
+                <i class="ri-whatsapp-line" aria-hidden="true"></i>
+                <span>Entre em Contato</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         SEÇÃO 05 — PROJETOS
+    ============================================================= -->
+    <section id="projetos" class="projects-section section" aria-labelledby="projetos-titulo">
+
+      <div class="projects-bg" aria-hidden="true">
+        <div class="projects-gradient"></div>
+        <div class="projects-grid-lines"></div>
+        <div class="projects-blur-l"></div>
+        <div class="projects-blur-r"></div>
+      </div>
+
+      <div class="container">
+
+        <div class="section-header" data-reveal>
+          <!-- ALTERE: Título e subtítulo da seção de Projetos -->
+          <span class="section-pill">— PROJETOS —</span>
+          <h2 id="projetos-titulo" class="section-title"><!-- ADICIONE O TÍTULO DA SEÇÃO AQUI --></h2>
+          <p class="section-desc"><!-- ADICIONE O SUBTÍTULO DA SEÇÃO AQUI --></p>
+        </div>
+
+        <!-- Carrossel de projetos -->
+        <div class="pcarousel-outer" data-reveal>
+
+          <!-- Seta navegação esquerda -->
+          <button class="carousel-arrow carousel-prev" id="projectPrev" aria-label="Projeto anterior">
+            <i class="ri-arrow-left-s-line" aria-hidden="true"></i>
+          </button>
+
+          <!-- Stage do carrossel — ADICIONE SEUS PROJETOS AQUI -->
+          <div class="pcarousel-stage" id="projectsStage" aria-live="polite" aria-label="Projetos">
+
+            <!-- ════════════════════════════════════════════════
+                 PROJETO 01 — COPIE E ALTERE ESTE BLOCO
+                 
+                 Atributos data-* do <article>:
+                 - data-title:   Nome do projeto
+                 - data-cat:     Categoria (ex: "Landing Page", "Web App", "Mobile")
+                 - data-desc:    Descrição completa para o modal
+                 - data-tags:    Tecnologias separadas por vírgula
+                 - data-video:   Caminho do vídeo ou URL do YouTube (ou deixe "#" se não tiver)
+                 - data-deploy:  URL do deploy online (ou "#" se não tiver)
+                 - data-github:  URL do repositório GitHub (ou "#" se não tiver)
+                 - data-details: Detalhes técnicos extras para o modal
+                 ════════════════════════════════════════════════ -->
+            <article class="project-card"
+              data-title="<!-- ADICIONE O NOME DO PROJETO AQUI -->"
+              data-cat="<!-- ADICIONE A CATEGORIA DO PROJETO -->"
+              data-desc="<!-- ADICIONE A DESCRIÇÃO COMPLETA DO PROJETO -->"
+              data-tags="<!-- TAG1,TAG2,TAG3 -->"
+              data-video="<!-- ADICIONE O CAMINHO DO VÍDEO OU URL YOUTUBE (ou #) -->"
+              data-deploy="<!-- ADICIONE A URL DO DEPLOY (ou #) -->"
+              data-github="<!-- ADICIONE A URL DO GITHUB (ou #) -->"
+              data-details="<!-- ADICIONE DETALHES TÉCNICOS EXTRAS -->">
+              <div class="project-img-wrap">
+                <div class="project-img-placeholder" aria-hidden="true"><i class="ri-code-box-line"></i></div>
+                <!-- ALTERE: Caminho para a imagem de capa do projeto -->
+                <img src="<!-- ADICIONE A IMAGEM DO PROJETO AQUI -->"
+                     alt="<!-- ADICIONE O NOME DO PROJETO AQUI -->" loading="lazy"
+                     onerror="this.style.display='none'">
+                <div class="project-overlay" aria-hidden="true"></div>
+                <span class="project-cat" aria-hidden="true"><!-- CATEGORIA --></span>
+              </div>
+              <div class="project-body">
+                <!-- ALTERE: Nome e descrição breve do projeto -->
+                <h3><!-- ADICIONE SEU PROJETO AQUI --></h3>
+                <p><!-- ADICIONE A DESCRIÇÃO BREVE DO PROJETO AQUI --></p>
+                <div class="project-tags" aria-label="Tecnologias">
+                  <!-- ALTERE: Tags de tecnologia -->
+                  <span><!-- TAG1 --></span>
+                  <span><!-- TAG2 --></span>
+                  <span><!-- TAG3 --></span>
+                </div>
+                <div class="project-actions">
+                  <button class="btn-project btn-open-modal" aria-label="Ver detalhes do projeto <!-- NOME -->">
+                    <span aria-hidden="true">&lt;/&gt;</span>
+                    <span>Ver Projeto</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- ════════════════════════════════════════════════
+                 PROJETO 02 — COPIE E ALTERE ESTE BLOCO
+                 ════════════════════════════════════════════════ -->
+            <article class="project-card"
+              data-title="<!-- ADICIONE O NOME DO PROJETO AQUI -->"
+              data-cat="<!-- ADICIONE A CATEGORIA DO PROJETO -->"
+              data-desc="<!-- ADICIONE A DESCRIÇÃO COMPLETA DO PROJETO -->"
+              data-tags="<!-- TAG1,TAG2,TAG3 -->"
+              data-video="<!-- ADICIONE O CAMINHO DO VÍDEO OU URL YOUTUBE (ou #) -->"
+              data-deploy="<!-- ADICIONE A URL DO DEPLOY (ou #) -->"
+              data-github="<!-- ADICIONE A URL DO GITHUB (ou #) -->"
+              data-details="<!-- ADICIONE DETALHES TÉCNICOS EXTRAS -->">
+              <div class="project-img-wrap">
+                <div class="project-img-placeholder" aria-hidden="true"><i class="ri-layout-line"></i></div>
+                <img src="<!-- ADICIONE A IMAGEM DO PROJETO AQUI -->"
+                     alt="<!-- ADICIONE O NOME DO PROJETO AQUI -->" loading="lazy"
+                     onerror="this.style.display='none'">
+                <div class="project-overlay" aria-hidden="true"></div>
+                <span class="project-cat" aria-hidden="true"><!-- CATEGORIA --></span>
+              </div>
+              <div class="project-body">
+                <h3><!-- ADICIONE SEU PROJETO AQUI --></h3>
+                <p><!-- ADICIONE A DESCRIÇÃO BREVE DO PROJETO AQUI --></p>
+                <div class="project-tags" aria-label="Tecnologias">
+                  <span><!-- TAG1 --></span>
+                  <span><!-- TAG2 --></span>
+                  <span><!-- TAG3 --></span>
+                </div>
+                <div class="project-actions">
+                  <button class="btn-project btn-open-modal" aria-label="Ver detalhes do projeto <!-- NOME -->">
+                    <span aria-hidden="true">&lt;/&gt;</span>
+                    <span>Ver Projeto</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- ════════════════════════════════════════════════
+                 PROJETO 03 — COPIE E ALTERE ESTE BLOCO
+                 ════════════════════════════════════════════════ -->
+            <article class="project-card"
+              data-title="<!-- ADICIONE O NOME DO PROJETO AQUI -->"
+              data-cat="<!-- ADICIONE A CATEGORIA DO PROJETO -->"
+              data-desc="<!-- ADICIONE A DESCRIÇÃO COMPLETA DO PROJETO -->"
+              data-tags="<!-- TAG1,TAG2,TAG3 -->"
+              data-video="<!-- ADICIONE O CAMINHO DO VÍDEO OU URL YOUTUBE (ou #) -->"
+              data-deploy="<!-- ADICIONE A URL DO DEPLOY (ou #) -->"
+              data-github="<!-- ADICIONE A URL DO GITHUB (ou #) -->"
+              data-details="<!-- ADICIONE DETALHES TÉCNICOS EXTRAS -->">
+              <div class="project-img-wrap">
+                <div class="project-img-placeholder" aria-hidden="true"><i class="ri-rocket-2-line"></i></div>
+                <img src="<!-- ADICIONE A IMAGEM DO PROJETO AQUI -->"
+                     alt="<!-- ADICIONE O NOME DO PROJETO AQUI -->" loading="lazy"
+                     onerror="this.style.display='none'">
+                <div class="project-overlay" aria-hidden="true"></div>
+                <span class="project-cat" aria-hidden="true"><!-- CATEGORIA --></span>
+              </div>
+              <div class="project-body">
+                <h3><!-- ADICIONE SEU PROJETO AQUI --></h3>
+                <p><!-- ADICIONE A DESCRIÇÃO BREVE DO PROJETO AQUI --></p>
+                <div class="project-tags" aria-label="Tecnologias">
+                  <span><!-- TAG1 --></span>
+                  <span><!-- TAG2 --></span>
+                  <span><!-- TAG3 --></span>
+                </div>
+                <div class="project-actions">
+                  <button class="btn-project btn-open-modal" aria-label="Ver detalhes do projeto <!-- NOME -->">
+                    <span aria-hidden="true">&lt;/&gt;</span>
+                    <span>Ver Projeto</span>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- ════════════════════════════════════════════════
+                 ADICIONE NOVOS PROJETOS AQUI
+                 (copie qualquer bloco <article> acima e cole aqui)
+                 ════════════════════════════════════════════════ -->
+
+          </div><!-- /pcarousel-stage -->
+
+          <!-- Seta navegação direita -->
+          <button class="carousel-arrow carousel-next" id="projectNext" aria-label="Próximo projeto">
+            <i class="ri-arrow-right-s-line" aria-hidden="true"></i>
+          </button>
+
+        </div><!-- /pcarousel-outer -->
+
+        <!-- Dots de navegação (gerados automaticamente pelo JavaScript) -->
+        <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Navegação por projeto"></div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SEÇÃO 06 — CONTATO
+    ============================================================= -->
+    <section class="contact-section" id="contatos" aria-labelledby="contatos-titulo">
+
+      <!-- Vídeo de fundo da seção de contato -->
+      <!-- ALTERE: Caminho do vídeo de fundo -->
+      <video autoplay muted loop playsinline class="contact-bg-video" aria-hidden="true">
+        <source src="<!-- ADICIONE O CAMINHO DO VÍDEO DE FUNDO AQUI -->" type="video/mp4">
+      </video>
+
+      <div class="contact-overlay" aria-hidden="true"></div>
+
+      <div class="contact-container">
+
+        <div class="contact-header section-header" data-reveal>
+          <!-- ALTERE: Título e descrição da seção de Contato -->
+          <span class="section-pill">— CONTATOS —</span>
+          <h2 id="contatos-titulo" class="section-title"><!-- ADICIONE O TÍTULO DA SEÇÃO AQUI --></h2>
+          <p class="section-desc"><!-- ADICIONE A DESCRIÇÃO DA SEÇÃO AQUI --></p>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Card: Formulário de contato -->
+          <div class="contact-card form-card">
+            <div class="contact-form-header">
+              <h3 class="contact-card-title">
+                <span class="contact-card-icon icon-purple" aria-hidden="true">&lt;/&gt;</span>
+                <!-- ALTERE: Título do formulário -->
+                <!-- ADICIONE O TÍTULO DO FORMULÁRIO AQUI -->
+              </h3>
+              <!-- ALTERE: Subtítulo do formulário -->
+              <p><!-- ADICIONE O SUBTÍTULO DO FORMULÁRIO AQUI --></p>
+            </div>
+
+            <!-- Formulário — ao submeter, o JS envia os dados via WhatsApp -->
+            <!-- IMPORTANTE: O número do WhatsApp de destino é configurado no script.js (CONFIG.CONTACT_WHATSAPP) -->
+            <form id="budgetForm" class="budget-form" novalidate aria-label="Formulário de contato">
+
+              <div class="form-group">
+                <label for="inputName">Nome Completo *</label>
+                <div class="form-input-wrapper">
+                  <i class="ri-user-line form-icon" aria-hidden="true"></i>
+                  <input type="text" id="inputName" name="name"
+                         placeholder="Seu nome completo"
+                         autocomplete="name"
+                         required aria-required="true"
+                         aria-describedby="errorName">
+                </div>
+                <span class="form-error" id="errorName" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="inputCompany">Nome da Empresa</label>
+                <div class="form-input-wrapper">
+                  <i class="ri-building-line form-icon" aria-hidden="true"></i>
+                  <input type="text" id="inputCompany" name="company"
+                         placeholder="Nome da empresa (opcional)"
+                         autocomplete="organization">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="inputPhone">Telefone / WhatsApp *</label>
+                <div class="form-input-wrapper">
+                  <i class="ri-smartphone-line form-icon" aria-hidden="true"></i>
+                  <input type="tel" id="inputPhone" name="phone"
+                         placeholder="(00) 00000-0000"
+                         autocomplete="tel"
+                         required aria-required="true"
+                         aria-describedby="errorPhone">
+                </div>
+                <span class="form-error" id="errorPhone" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="inputMessage">Descrição do Projeto / Mensagem *</label>
+                <div class="form-input-wrapper textarea-wrapper">
+                  <i class="ri-lightbulb-line form-icon" aria-hidden="true"></i>
+                  <textarea id="inputMessage" name="message"
+                            placeholder="Descreva seu projeto ou como posso te ajudar..."
+                            rows="5" required aria-required="true"
+                            aria-describedby="errorMessage"></textarea>
+                </div>
+                <span class="form-error" id="errorMessage" role="alert"></span>
+              </div>
+
+              <button type="submit" class="contact-btn btn-primary btn-full">
+                <span class="btn-code" aria-hidden="true">&lt;/&gt;</span>
+                <span>Enviar Mensagem</span>
+              </button>
+
+            </form>
+          </div><!-- /form-card -->
+
+          <!-- Card: Redes Sociais / Hub Digital -->
+          <div class="contact-card social-card">
+
+            <div class="social-hub-header">
+              <h3 class="contact-card-title">
+                <span class="contact-card-icon icon-purple" aria-hidden="true">
+                  <i class="ri-share-line" aria-hidden="true"></i>
+                </span>
+                <!-- ALTERE: Título do hub de redes sociais -->
+                <!-- ADICIONE O TÍTULO DO HUB AQUI (ex: Hub Digital) -->
+              </h3>
+            </div>
+
+            <!-- Grade de redes sociais — ALTERE os links e ícones -->
+            <div class="social-grid" role="list" aria-label="Redes sociais">
+
+              <!-- ══ WHATSAPP ══ -->
+              <!-- ALTERE: Link do WhatsApp -->
+              <a href="https://wa.me/44991768313?text=Olá Henrique, quero alavancar meu negocio!"
+                 target="_blank" rel="noopener noreferrer"
+                 class="social-item" aria-label="WhatsApp" role="listitem">
+                <i class="ri-whatsapp-line" aria-hidden="true"></i>
+                <span>WhatsApp</span>
+              </a>
+
+              <!-- ══ INSTAGRAM ══ -->
+              <!-- ALTERE: Link do Instagram -->
+              <a href="https://www.instagram.com/<!-- ADICIONE SEU INSTAGRAM AQUI -->/"
+                 target="_blank" rel="noopener noreferrer"
+                 class="social-item" aria-label="Instagram" role="listitem">
+                <i class="ri-instagram-line" aria-hidden="true"></i>
+                <span>Instagram</span>
+              </a>
+
+              <!-- ══ GITHUB ══ -->
+              <!-- ALTERE: Link do GitHub -->
+              <a href="https://github.com/<!-- ADICIONE SEU GITHUB AQUI -->"
+                 target="_blank" rel="noopener noreferrer"
+                 class="social-item" aria-label="GitHub" role="listitem">
+                <i class="ri-github-line" aria-hidden="true"></i>
+                <span>GitHub</span>
+              </a>
+
+              <!-- ══ LINKEDIN ══ -->
+              <!-- ALTERE: Link do LinkedIn -->
+              <a href="https://www.linkedin.com/in/<!-- ADICIONE SEU LINKEDIN AQUI -->/"
+                 target="_blank" rel="noopener noreferrer"
+                 class="social-item" aria-label="LinkedIn" role="listitem">
+                <i class="ri-linkedin-box-line" aria-hidden="true"></i>
+                <span>LinkedIn</span>
+              </a>
+
+              <!-- ══ E-MAIL ══ -->
+              <!-- ALTERE: Seu endereço de e-mail -->
+              <a href="mailto:<!-- ADICIONE SEU EMAIL AQUI -->"
+                 class="social-item" aria-label="E-mail" role="listitem">
+                <i class="ri-mail-line" aria-hidden="true"></i>
+                <span>E-mail</span>
+              </a>
+
+            </div><!-- /social-grid -->
+
+            <!-- Texto e botão de contato direto -->
+            <div class="social-info">
+              <!-- ALTERE: Texto descritivo abaixo das redes sociais -->
+              <p><!-- ADICIONE SUA DESCRIÇÃO / FRASE DE CONTATO AQUI --></p>
+              <!-- ALTERE: Botão de contato direto -->
+              <a href="https://wa.me/44991768313?text=Olá Henrique, quero alavancar meu negocio!"
+                 target="_blank" rel="noopener noreferrer"
+                 class="btn-primary">
+                <span class="btn-code" aria-hidden="true">&lt;/&gt;</span>
+                <span>Falar Agora</span>
+              </a>
+            </div>
+
+          </div><!-- /social-card -->
+
+        </div><!-- /contact-grid -->
+      </div><!-- /contact-container -->
+
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+    ============================================================= -->
+    <footer id="footer" class="site-footer" role="contentinfo">
+      <div class="footer-bg" aria-hidden="true">
+        <div class="footer-grid-bg"></div>
+        <div class="footer-gradient"></div>
+      </div>
+
+      <div class="container">
+        <div class="footer-grid-layout">
+
+          <!-- Coluna: Marca/Brand -->
+          <div class="footer-brand">
+            <!-- ALTERE: Link e nome do footer -->
+            <a href="#home" class="footer-logo">
+              <!-- ALTERE: Caminho do logo no footer -->
+              <img src="Design sem nome.png" alt="Henrique Soares" class="brand-logo-img">
+              <!-- ALTERE: Seu nome completo -->
+              <span><!-- ADICIONE SEU NOME COMPLETO AQUI --></span>
+            </a>
+            <!-- ALTERE: Frase/tagline do footer -->
+            <p class="footer-brand-desc">
+              <!-- ADICIONE SUA FRASE/TAGLINE AQUI -->
+            </p>
+            <!-- Redes sociais do footer -->
+            <nav class="footer-social" aria-label="Redes sociais">
+              <!-- ALTERE: Links das redes sociais no footer -->
+              <a href="https://wa.me/44991768313" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="ri-whatsapp-line" aria-hidden="true"></i></a>
+              <a href="https://www.instagram.com/<!-- ADICIONE SEU INSTAGRAM AQUI -->/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="ri-instagram-line" aria-hidden="true"></i></a>
+              <a href="https://github.com/<!-- ADICIONE SEU GITHUB AQUI -->" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="ri-github-line" aria-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/in/<!-- ADICIONE SEU LINKEDIN AQUI -->/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="ri-linkedin-box-line" aria-hidden="true"></i></a>
+              <a href="mailto:<!-- ADICIONE SEU EMAIL AQUI -->" aria-label="E-mail"><i class="ri-mail-line" aria-hidden="true"></i></a>
+            </nav>
+          </div>
+
+          <!-- Coluna: Navegação -->
+          <div class="footer-col">
+            <h3 class="footer-title-purple">Navegação</h3>
+            <ul role="list">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#formacao">Formação</a></li>
+              <li><a href="#zyntek" >Zyntek</a></li>
+              <li><a href="#projetos">Projetos</a></li>
+              <li><a href="#contatos">Contatos</a></li>
+            </ul>
+          </div>
+
+          <!-- Coluna: Stack/Tecnologias -->
+          <div class="footer-col">
+            <h3 class="footer-title-purple">Stack</h3>
+            <!-- ALTERE: Suas principais tecnologias no footer -->
+            <ul role="list">
+              <li>Java</li>
+              <li>JavaScript</li>
+              <li>Git</li>
+              <li>MySql</li>
+              <li>BackEnd</li>
+            </ul>
+          </div>
+
+          <!-- Coluna: Contato direto -->
+          <div class="footer-col">
+            <h3 class="footer-title-purple">Contato</h3>
+            <ul role="list">
+              <!-- ALTERE: Informações de contato no footer -->
+              <li><a href="mailto:henriquesoaressouza55@gmail.com">henriquesoaressouza55@gmail.com</a></li>
+              <li><a href="https://wa.me/44991768313" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- CTA do footer -->
+        <div class="footer-cta">
+          <div class="footer-cta-icon" aria-hidden="true"><i class="ri-terminal-box-fill"></i></div>
+          <div class="footer-cta-text">
+            <!-- ALTERE: Título e texto do CTA do footer -->
+            <h3>Tem um Projeto em Mente?</h3>
+            <p>Seja para desenvolver uma aplicação, colaborar em um projeto ou trocar experiências sobre tecnologia, ficarei feliz em conversar com você.</p>
+          </div>
+          <!-- ALTERE: Link do botão do CTA do footer -->
+          <a href="https://wa.me/44991768313?text=Olá Henrique, quero alavancar meu negocio!"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn-primary">
+            <span aria-hidden="true">&lt;/&gt;</span>
+            <span>Entre em Contato</span>
+          </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+          <div class="footer-divider" aria-hidden="true"></div>
+          <div class="footer-bottom-inner">
+            <!-- ALTERE: Texto de copyright -->
+            <p>© 2026 Henrique. Todos os direitos reservados.</p>
+            <!-- ALTERE: Créditos de desenvolvimento (opcional) -->
+            <p>Desenvolvido por <a href="<!-- LINK DO DESENVOLVEDOR -->" target="_blank" rel="noopener noreferrer">Henrique Soares Souza</a>.</p>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </main><!-- /#app -->
+
+  <!-- Script principal — carregado ao final do body para melhor performance -->
+  <script src="script.js"></script>
+</body>
+</html>
