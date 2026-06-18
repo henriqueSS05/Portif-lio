@@ -179,6 +179,26 @@ strong { font-weight: 700; }
    COMPONENTES GLOBAIS
 ========================================== */
 
+/* Cookies */
+#cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: #222;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+    z-index: 9999;
+}
+
+#accept-cookies {
+    margin-top: 10px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
 /* Container */
 .container {
   width: min(100% - 48px, var(--container));
