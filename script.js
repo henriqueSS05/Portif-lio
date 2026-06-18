@@ -35,6 +35,19 @@ const CONFIG = Object.freeze({
   CONTACT_WHATSAPP:        "5500000000000",
 });
 
+/*________ Cookies________*/
+const banner = document.getElementById("cookie-banner");
+const button = document.getElementById("accept-cookies");
+
+if (!localStorage.getItem("cookiesAccepted")) {
+    banner.style.display = "block";
+}
+
+button.addEventListener("click", () => {
+    localStorage.setItem("cookiesAccepted", "true");
+    banner.style.display = "none";
+});
+
 
 /* ==========================================
    SELETORES GLOBAIS
